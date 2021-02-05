@@ -15,7 +15,7 @@ summary(data1); summary(data2); summary(data3)
 lista <- list(data1, data2, data3)
 nlista <- lapply(lista, select, Date, HomeTeam, AwayTeam, FTHG, FTAG, FTR)
 lapply(nlista, str)
-#4.- Validamos el tipo de dato
+#4.- Formato de fecha
 
 nlista[[1]] <- mutate(nlista[[1]], Date = as.Date(Date, "%d/%m/%y"))
 nlista[[2]] <- mutate(nlista[[2]], Date = as.Date(Date, "%d/%m/%Y"))
